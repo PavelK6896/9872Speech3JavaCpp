@@ -1,0 +1,11 @@
+
+javac -d bin/ src/main/java/app/web/pavelk/speech3/Speech.java
+
+cd bin
+
+javah app.web.pavelk.speech3.Speech
+
+g++ -I"C:\Program Files\Java\jdk1.8.0_261\include" -I"C:\Program Files\Java\jdk1.8.0_261\include\win32" -fPIC app_web_pavelk_speech3_Speech.cpp -shared -o cpp1.so -Wl,-soname -Wl,--no-whole-archive
+
+
+
